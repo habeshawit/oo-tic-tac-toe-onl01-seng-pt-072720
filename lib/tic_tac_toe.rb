@@ -53,6 +53,7 @@ class TicTacToe
     if valid_move?(input)
       move(input,current_player)
     else
+      puts "Position taken. Try again!"
       turn
     end
     display_board
