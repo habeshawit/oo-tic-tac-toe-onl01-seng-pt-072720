@@ -45,17 +45,26 @@ class TicTacToe
     input = gets.chomp
     input = input_to_index(input)
     
-    if valid_move?(input)
-      move(input,current_player)
-      display_board
-    else
+    #if valid_move?(input)
+     # move(input,current_player)
+      #display_board
+    #else
+     # puts "Invalid choice. Try again!"
+      #input = gets.chomp
+      #input = input_to_index(input)
+    #end
+    
+    if !valid_move?(input)
       puts "Invalid choice. Try again!"
       input = gets.chomp
       input = input_to_index(input)
+    else
+      move(input,current_player)
+      display_board
     end
+   
     
-  
-    
+
   end
   
 end
